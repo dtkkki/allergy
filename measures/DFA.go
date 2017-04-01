@@ -58,7 +58,12 @@ func (sw *DFAFilter) SensitiveWordInit() {
 	fmt.Println("--构成敏感词库--\n", string(xxoo), "\n\n")
 }
 
+func (sw *DFAFilter) checkSensitiveWord(text textshandler.DirtyTextInterface) {
+
+}
+
 //Process ...
 func (sw *DFAFilter) Process(text textshandler.DirtyTextInterface) {
 	text.PreHandle()
+
 }

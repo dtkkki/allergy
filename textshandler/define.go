@@ -34,6 +34,18 @@ func (dt *DirtyText) PreHandle() {
 	fmt.Println("--preHandle--\n", dt.content, "\n\n")
 }
 
+func (dt *DirtyText) IsReplace() bool {
+	return dt.replace
+}
+
+func (dt *DirtyText) NextText() *DirtyText {
+	return dt.next
+}
+
+func (dt *DirtyText) PrevText() *DirtyText {
+	return dt.prev
+}
+
 //DirtyTextHandler ...对污秽评论的一些处理回调函数
 type DirtyTextHandler interface {
 	Handle(text string) string
